@@ -7,7 +7,7 @@ export default function MiniCard() {
     <div className="">
       <div className="rounded-b-3xl bgIvanZelenaSvetla">
         <div className="relative grid grid-cols-1">
-          <div className="relative h-80">
+          <div className="relative h-52 lg:h-80">
             <Image
               src="/images/slika1.jpg"
               alt="Picture of real estate"

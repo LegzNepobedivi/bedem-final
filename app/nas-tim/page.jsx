@@ -9,7 +9,10 @@ export default function NasTim() {
         <div className="text-center text-3xl pt-3 pb-2 ">Naš tim</div>
         <div className="grid md:grid-cols-2 xl:grid-cols-3">
           {agenti.map((item) => (
-            <div className="m-4 border-2 border-zinc-500 shadow-md rounded-3xl  ">
+            <div
+              key={item.id}
+              className="m-4 border-2 border-zinc-500 shadow-md rounded-3xl  "
+            >
               <div className="my-3 mt-4 flex justify-center">
                 <div className=" w-24">
                   <AgentSvg />

@@ -11,16 +11,37 @@ const imgs = [
   "/images/slika2.jpg",
   "/images/slika3.jpg",
   "/images/slika1.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
+  "/images/slika2.jpg",
+  "/images/slika3.jpg",
+  "/images/slika1.jpg",
 ];
 
 const ONE_SECOND = 1000;
 const AUTO_DELAY = ONE_SECOND * 10;
-const DRAG_BUFFER = 30;
+const DRAG_BUFFER = 20;
 
 const SPRING_OPTIONS = {
   type: "spring",
-  mass: 3,
-  stiffness: 400,
+  mass: 4,
+  stiffness: 200,
   damping: 50,
 };
 
@@ -78,7 +99,7 @@ export const SwipeCarousel = () => {
       </motion.div>
 
       <Dots imgIndex={imgIndex} setImgIndex={setImgIndex} />
-      <GradientEdges />
+      {/* <GradientEdges /> */}
     </div>
   );
 };
@@ -99,7 +120,7 @@ const Images = ({ imgIndex }) => {
               scale: imgIndex === idx ? 0.95 : 0.85,
             }}
             transition={SPRING_OPTIONS}
-            className="aspect-video md:w-1/2 w-full shrink-0 rounded-xl bg-neutral-800 object-cover"
+            className="aspect-video w-full shrink-0 rounded-xl bg-neutral-800 object-cover"
           />
         );
       })}
@@ -109,7 +130,7 @@ const Images = ({ imgIndex }) => {
 
 const Dots = ({ imgIndex, setImgIndex }) => {
   return (
-    <div className="mt-4 flex w-full justify-center gap-2">
+    <div className="mt-4 flex w-full justify-center gap-2 flex-wrap">
       {imgs.map((_, idx) => {
         return (
           <button

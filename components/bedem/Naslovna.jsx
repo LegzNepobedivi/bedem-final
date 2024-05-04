@@ -7,6 +7,7 @@ import Izdvajamo from "./Izdvajamo";
 import MiniKartice from "./MiniKartice";
 import ForeignCarousel from "../foreign/HorizontalScrollCarousel";
 import { SwipeCarousel } from "../foreign/SwipeCarousel";
+import Predlozi from "./Predlozi";
 
 export default function Naslovna() {
   return (
@@ -33,7 +34,11 @@ export default function Naslovna() {
         <Pretraga />
       </div>
       <Izdvajamo />
-      <ForeignCarousel />
+      <div className="container mx-auto py-3">
+        <div className="container mx-auto">
+          <Predlozi />
+        </div>
+      </div>
     </div>
   );
 }

@@ -20,7 +20,7 @@ export default function Byline({ className }) {
         <div className="text-sm text-gray-400">
           <Link
             className="underline decoration-dotted underline-offset-4 transition-colors hover:text-gray-300"
-            href=""
+            href="/logout"
             target="_blank"
             rel="noreferrer"
           >

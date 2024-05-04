@@ -7,23 +7,28 @@ import Image from "next/image";
 import { poppins } from "@/app/layout";
 import { SwipeCarousel } from "@/components/foreign/SwipeCarousel";
 
+import Predlozi from "@/components/bedem/Predlozi";
+import Link from "next/link";
+
 export default function PrikazNekretnine() {
   return (
     <div className="bg-white">
       <div className="container mx-auto">
-        <div className={`${poppins.className} bg-white text-slate-600 `}>
-          <button className="flex uppercase border-2 borderIvanZelenaSvetla py-1 px-2">
-            <span>
-              <LeftArrowSvg />
-            </span>{" "}
-            Nazad
-          </button>
+        <div className={`${poppins.className} bg-white text-slate-600`}>
+          <Link href="/nekretnine">
+            <button className="flex uppercase border-2 borderIvanZelenaSvetla py-1 px-2 hover:text-black">
+              <span>
+                <LeftArrowSvg />
+              </span>
+              Nazad
+            </button>
+          </Link>
         </div>
         <div className="py-2 px-4">
           <div className="ivanZelena text-2xl font-semibold mb-3">
             Šumatovačka 116, Vračar, Beograd
           </div>
-          <div className="grid grid-cols-4 md:grid-cols-6 xl:grid-cols-8 gap-0 mx-auto font-medium">
+          <div className="grid grid-cols-2 md:grid-cols-6 xl:grid-cols-8 gap-0 mx-auto font-medium">
             <div className="">
               <div
                 className={`${poppins.className} ivanZlatna uppercase text-sm`}
@@ -58,7 +63,7 @@ export default function PrikazNekretnine() {
             </div>
           </div>
         </div>
-        <div className="p-2 flex">
+        <div className="p-2 flex ">
           <div className=" w-14 ivanZelena">
             <AgentSvg />
           </div>
@@ -74,6 +79,8 @@ export default function PrikazNekretnine() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mx-auto container md:w-3/4 lg:w-2/3">
         <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-400"></hr>
         {/* <div className="relative grid grid-cols-1 p-2">
           <div className="relative h-80">
@@ -87,6 +94,8 @@ export default function PrikazNekretnine() {
         </div> */}
         <SwipeCarousel />
         {/*Sledeca sekcija*/}
+      </div>
+      <div>
         <div className="p-2 ivanZelena text-center ">
           <h1 className="text-3xl">Karakteristike</h1>
           <div className="grid grid-cols-3 gap-0 mx-auto font-medium py-3">
@@ -118,7 +127,7 @@ export default function PrikazNekretnine() {
         </div>
         {/*Sledeca sekcija*/}
         <div className="bgIvanZelenaSvetla py-3">
-          <div className="container mx-auto px-4">
+          <div className="px-4">
             <p className="text-center text-4xl">O lokaciji</p>
             <div className="border-t border-gray-600 my-4"></div>
             <p className="text-center ivanSiva font-thin">
@@ -128,16 +137,14 @@ export default function PrikazNekretnine() {
             </p>
           </div>
         </div>
-        <iframe
-          width="600"
-          height="450"
-          //style="border:0"
-          loading="lazy"
-          //allowfullscreen
-          //referrerpolicy="no-referrer-when-downgrade"
-          src="https://www.google.com/maps/embed/v1/place?key=API_KEY
-    &q=Space+Needle,Seattle+WA"
-        ></iframe>
+      </div>
+      <div className="container mx-auto py-3">
+        <div className="ivanZelena">
+          <p className="text-center text-4xl mb-3">Možda vam se svidi</p>
+          <div className="container mx-auto">
+            <Predlozi />
+          </div>
+        </div>
       </div>
     </div>
   );

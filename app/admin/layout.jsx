@@ -1,11 +1,8 @@
 import { createClient } from "@/utils/supabase/server";
 import { redirect } from "next/navigation";
 
-import HeaderAdmin from "@/components/adminpage/HeaderAdmin";
-import Sidebars from "@/components/adminpage/Sidebars";
 import { GlobalNav } from "@/components/adminpage/GlobalNav";
 import Byline from "@/components/adminpage/Byline";
-import AddressBar from "@/components/adminpage/AddressBar";
 
 const AdminLayout = async ({ children }) => {
   const supabase = createClient();
@@ -20,7 +17,7 @@ const AdminLayout = async ({ children }) => {
 
   return (
     <html lang="en" className="[color-scheme:dark]">
-      <body className="overflow-y-scroll bg-gray-1100 bg-[url('/grid.svg')] pb-36">
+      <body className="overflow-y-scroll bg-gray-1100  pb-36">
         <GlobalNav />
 
         <div className="lg:pl-72">

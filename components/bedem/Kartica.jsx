@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Kartica({ sourceUrl }) {
   return (
-    <div className=" md:rounded-lg shadow-lg overflow-hidden">
+    <div className="md:rounded-lg shadow-lg overflow-hidden">
       <div>
         <div className="flex items-start uppercase text-sm">
           <div className="bgIvanZelena py-1 px-2 rounded-tr-lg">Novo</div>
@@ -36,7 +36,7 @@ export default function Kartica({ sourceUrl }) {
             4 sobe-1 Kupatilo - 150m2
           </div>
         </div>
-        <div className="p-2 flex">
+        <div className="p-2 flex ">
           <div className=" w-14 ivanZelena">
             <AgentSvg />
           </div>
@@ -44,11 +44,11 @@ export default function Kartica({ sourceUrl }) {
             <div className="text-base ivanZelena font-semibold">
               Agent: Marko +381 69 123 4567
             </div>
-            <div className="flex ivanZelena border-2 border-green-950 w-fit">
+            <div className="flex ivanZelena border-2 border-green-950 w-fit ">
               <PhoneSvg />
-              <button className="bg-green-950 uppercase text-white text-sm py-1 px-2">
+              <div className="bg-green-950 uppercase text-white text-sm py-1 px-2 hover:bg-green-900">
                 Pozovi
-              </button>
+              </div>
             </div>
           </div>
         </div>

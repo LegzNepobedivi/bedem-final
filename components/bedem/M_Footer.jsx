@@ -27,8 +27,12 @@ const M_Footer = () => {
           <div className="md:text-sm text-xs text-center flex flex-col gap-2 border-r border-gray-400">
             <p className="ivanZelena font-bold text-xl">Poslovni podaci</p>
             <p>Nehruova 51, 11070 Beograd, Srbija</p>
-            <Link href="tel:0111234567">011 12 34 567 - korisnicki servis</Link>
-            <Link href="tel:0111234567">011 12 34 567 - tehnicki servis</Link>
+            <Link href="tel:+381 63 445 079">
+              +381 63 445 079 - korisnicki servis
+            </Link>
+            <Link href="tel:+381 63 445 079">
+              +381 63 445 079 - tehnicki servis
+            </Link>
             <Link
               href="mailto:info@bedemnekretnine.com"
               className="hover:text-gray-400"
