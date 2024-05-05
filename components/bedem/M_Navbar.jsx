@@ -10,6 +10,8 @@ import {
   FingerPrintIcon,
   SquaresPlusIcon,
   XMarkIcon,
+  BuildingOfficeIcon,
+  BuildingOffice2Icon,
 } from "@heroicons/react/24/outline";
 import {
   ChevronDownIcon,
@@ -24,21 +26,21 @@ import { usePathname } from "next/navigation";
 
 const products = [
   {
-    name: "Analytics",
-    description: "Get a better understanding of your traffic",
-    href: "#",
-    icon: ChartPieIcon,
+    name: "Novi Banovci",
+    description: "Uhvati priliku za investiciju u budućnost",
+    href: "/projekti/novi-banovci",
+    icon: BuildingOfficeIcon,
   },
   {
-    name: "Engagement",
-    description: "Speak directly to your customers",
-    href: "#",
-    icon: CursorArrowRaysIcon,
+    name: "Stara Pazova",
+    description: "Kupi stan u srcu Vojvodine",
+    href: "/projekti/stara-pazova",
+    icon: BuildingOffice2Icon,
   },
 ];
 const callsToAction = [
-  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-  { name: "Contact sales", href: "#", icon: PhoneIcon },
+  { name: "Svi projekti", href: "/projekti", icon: PlayCircleIcon },
+  { name: "Kontaktiraj nas", href: "tel:+381 63 445 079", icon: PhoneIcon },
 ];
 
 function classNames(...classes) {
@@ -60,7 +62,7 @@ const M_Navbar = () => {
         } bgIvanZelenaSvetla uppercase fixed w-full z-10 top-0`}
       >
         <nav
-          className="mx-auto flex max-w-7xl items-center sticky justify-between p-3 lg:px-8 "
+          className="mx-auto flex max-w-7xl items-center  justify-between p-3 lg:px-8 "
           aria-label="Global"
         >
           <div className="flex lg:flex-1">
@@ -92,69 +94,76 @@ const M_Navbar = () => {
             >
               Nekretnine
             </Link>
-            <Popover className="relative">
-              <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white uppercase">
-                Projekti
-                <ChevronDownIcon
-                  className="h-5 w-5 flex-none text-white"
-                  aria-hidden="true"
-                />
-              </Popover.Button>
 
-              <Transition
-                as={Fragment}
-                enter="transition ease-out duration-200"
-                enterFrom="opacity-0 translate-y-1"
-                enterTo="opacity-100 translate-y-0"
-                leave="transition ease-in duration-150"
-                leaveFrom="opacity-100 translate-y-0"
-                leaveTo="opacity-0 translate-y-1"
-              >
-                <Popover.Panel className="absolute -left-8 top-full z-40 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
-                  <div className="p-4">
-                    {products.map((item) => (
-                      <div
-                        key={item.name}
-                        className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
-                      >
-                        <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
-                          <item.icon
-                            className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
-                            aria-hidden="true"
-                          />
-                        </div>
-                        <div className="flex-auto">
-                          <Link
-                            href={item.href}
-                            className="block font-semibold text-gray-900"
+            <Popover className="relative">
+              {({ open, close }) => (
+                <>
+                  <Popover.Button className="flex items-center gap-x-1 text-sm font-semibold leading-6 text-white uppercase">
+                    Projekti
+                    <ChevronDownIcon
+                      className="h-5 w-5 flex-none text-white"
+                      aria-hidden="true"
+                    />
+                  </Popover.Button>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-200"
+                    enterFrom="opacity-0 translate-y-1"
+                    enterTo="opacity-100 translate-y-0"
+                    leave="transition ease-in duration-150"
+                    leaveFrom="opacity-100 translate-y-0"
+                    leaveTo="opacity-0 translate-y-1"
+                  >
+                    <Popover.Panel className="absolute -left-8 top-full z-40 mt-3 w-screen max-w-md overflow-hidden rounded-3xl bg-white shadow-lg ring-1 ring-gray-900/5">
+                      <div className="p-4">
+                        {products.map((item) => (
+                          <div
+                            key={item.name}
+                            className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                           >
-                            {item.name}
-                            <span className="absolute inset-0" />
-                          </Link>
-                          <p className="mt-1 text-gray-600">
-                            {item.description}
-                          </p>
-                        </div>
+                            <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
+                              <item.icon
+                                className="h-6 w-6 text-gray-600 group-hover:text-indigo-600"
+                                aria-hidden="true"
+                              />
+                            </div>
+                            <div className="flex-auto">
+                              <Link
+                                href={item.href}
+                                className="block font-semibold text-gray-900"
+                                onClick={close}
+                              >
+                                {item.name}
+                                <span className="absolute inset-0" />
+                              </Link>
+                              <p className="mt-1 text-gray-600">
+                                {item.description}
+                              </p>
+                            </div>
+                          </div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                  <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
-                    {callsToAction.map((item) => (
-                      <Link
-                        key={item.name}
-                        href={item.href}
-                        className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
-                      >
-                        <item.icon
-                          className="h-5 w-5 flex-none text-gray-400"
-                          aria-hidden="true"
-                        />
-                        {item.name}
-                      </Link>
-                    ))}
-                  </div>
-                </Popover.Panel>
-              </Transition>
+                      <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-50">
+                        {callsToAction.map((item) => (
+                          <Link
+                            key={item.name}
+                            href={item.href}
+                            className="flex items-center justify-center gap-x-2.5 p-3 text-sm font-semibold leading-6 text-gray-900 hover:bg-gray-100"
+                            onClick={close}
+                          >
+                            <item.icon
+                              className="h-5 w-5 flex-none text-gray-400"
+                              aria-hidden="true"
+                            />
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </Popover.Panel>
+                  </Transition>
+                </>
+              )}
             </Popover>
 
             <Link

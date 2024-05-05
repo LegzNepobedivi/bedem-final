@@ -5,7 +5,7 @@ import { poppins } from "@/app/layout";
 
 export default function Izdvajamo({}) {
   return (
-    <div className=" bg-stone-100 p-10 pb-6">
+    <div className="bg-stone-100 p-10 pb-6">
       <div className="text-center text-3xl ivanZelena font-medium mb-3">
         Izdvajamo
       </div>
@@ -15,7 +15,7 @@ export default function Izdvajamo({}) {
             src="/images/slika1.jpg"
             alt="Picture of real estate"
             fill
-            objectFit="cover"
+            style={{ objectFit: "cover" }}
           />
           <div className="absolute mx-3 mt-[17rem] text-2xl">
             Sokobanja - Sokonova
@@ -25,8 +25,8 @@ export default function Izdvajamo({}) {
           <Image
             src="/images/slika1.jpg"
             alt="Picture of real estate"
+            style={{ objectFit: "cover" }}
             fill
-            objectFit="cover"
           />
           <div className="absolute mx-3 mt-[17rem] text-2xl">
             Novi Banovci - Balkanska trilogija

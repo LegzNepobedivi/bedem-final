@@ -22,7 +22,7 @@ export default function Pretraga({}) {
               classes={
                 "border-solid border-1 border-green-800 md:mr-3 mr-1 flex-col hover:bg-green-900 hover:text-white"
               }
-              items={["Stan", "Zemljište", "Kuća", "Poslovni prostor"]}
+              items={["Stan", "Kuća", "Poslovni prostor", "Zemljište"]}
               title={"Tip nekretnine"}
             />
             <button

@@ -2,7 +2,6 @@ import Image from "next/image";
 
 import AgentSvg from "../svgComp/AgentSvg";
 import PhoneSvg from "../svgComp/PhoneSvg";
-import Link from "next/link";
 
 export default function Kartica({ sourceUrl }) {
   return (
@@ -17,8 +16,8 @@ export default function Kartica({ sourceUrl }) {
             <Image
               src={sourceUrl}
               alt="Picture of real estate"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>

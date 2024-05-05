@@ -1,12 +1,8 @@
-import Image from "next/image";
 import Link from "next/link";
 import Pretraga from "./Pretraga";
 
 import { poppins } from "@/app/layout";
 import Izdvajamo from "./Izdvajamo";
-import MiniKartice from "./MiniKartice";
-import ForeignCarousel from "../foreign/HorizontalScrollCarousel";
-import { SwipeCarousel } from "../foreign/SwipeCarousel";
 import Predlozi from "./Predlozi";
 
 export default function Naslovna() {
