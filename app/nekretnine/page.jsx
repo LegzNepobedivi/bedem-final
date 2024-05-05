@@ -6,7 +6,9 @@ export default function NekretninePage() {
   return (
     <>
       <div className="bg-white z-10">
-        <Pretraga />
+        <div className="container mx-auto">
+          <Pretraga />
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 container mx-auto">
           <Link href="/nekretnine/1">
             <Kartica sourceUrl="/images/slika1.jpg" />
