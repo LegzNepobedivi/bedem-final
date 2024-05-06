@@ -167,7 +167,7 @@ const M_Navbar = () => {
             </Popover>
 
             <Link
-              href="nas-tim"
+              href="/nas-tim"
               className="text-sm font-semibold leading-6 text-white"
             >
               Naš tim

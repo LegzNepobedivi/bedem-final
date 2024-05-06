@@ -1,10 +1,12 @@
 "use client";
 
-import { Fragment, useState } from "react";
+import { Fragment, useEffect, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 import { Poppins } from "next/font/google";
+import Link from "next/link";
+import { set } from "date-fns";
 
 const poppins = Poppins({
   weight: ["400", "500", "600"],
@@ -19,10 +21,15 @@ export default function DropdownButton({ title, items, classes }) {
   let key = 0;
 
   const [selected, setSelected] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(title);
 
-  function handleClick() {
-    setSelected(!selected);
-    console.log(selected);
+  // useEffect(() => {
+  //   console.log(selected);
+  // }, [selected]);
+
+  function handleClick(item) {
+    //setSelected(!selected);
+    console.log(item);
   }
 
   return (
@@ -36,7 +43,7 @@ export default function DropdownButton({ title, items, classes }) {
                 "uppercase inline-flex w-full justify-center gap-x-1.5 rounded-sm px-3 py-2 text-sm font-semibold shadow-sm ring-1 ring-inset ring-green-800"
               )}
             >
-              <span>{title}</span>
+              <span>{selectedItem}</span>
               <ChevronDownIcon className="-mr-1 h-5 w-5 " aria-hidden="true" />
             </div>
           )}

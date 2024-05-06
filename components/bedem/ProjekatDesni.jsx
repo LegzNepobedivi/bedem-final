@@ -15,6 +15,7 @@ function ProjekatDesni() {
                   src="/images/slika1.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Lepa slika koja reprezentuje projekat"
                 />
               </div>
               <div className="relative h-36 md:h-52 lg:h-72">
@@ -22,6 +23,7 @@ function ProjekatDesni() {
                   src="/images/slika1.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Lepa slika koja reprezentuje projekat"
                 />
               </div>
             </div>
@@ -33,6 +35,7 @@ function ProjekatDesni() {
                   src="/images/slika1.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Lepa slika koja reprezentuje projekat"
                 />
               </div>
               <div className="relative h-36 md:h-52 lg:h-72">
@@ -40,6 +43,7 @@ function ProjekatDesni() {
                   src="/images/slika1.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Lepa slika koja reprezentuje projekat"
                 />
               </div>
             </div>

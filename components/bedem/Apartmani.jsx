@@ -24,6 +24,7 @@ function Apartmani() {
                   src="/images/apartman.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Slika apartmana u okviru objekta"
                 />
               </div>
               <div className="relative h-56 md:h-80">
@@ -31,6 +32,7 @@ function Apartmani() {
                   src="/images/apartman.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Slika apartmana u okviru objekta"
                 />
               </div>
             </div>
@@ -44,6 +46,7 @@ function Apartmani() {
                   src="/images/apartman.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Slika apartmana u okviru objekta"
                 />
               </div>
               <div className="relative h-56 md:h-80">
@@ -51,6 +54,7 @@ function Apartmani() {
                   src="/images/apartman.jpg"
                   fill
                   style={{ objectFit: "cover" }}
+                  alt="Slika apartmana u okviru objekta"
                 />
               </div>
             </div>

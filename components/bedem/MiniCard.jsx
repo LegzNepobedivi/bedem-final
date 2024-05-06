@@ -11,8 +11,8 @@ export default function MiniCard() {
             <Image
               src="/images/slika1.jpg"
               alt="Picture of real estate"
-              layout="fill"
-              objectFit="cover"
+              fill
+              style={{ objectFit: "cover" }}
               //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           </div>
