@@ -47,6 +47,7 @@ export default function DragAndDrop() {
       <h1 className="text-xl font-bold mt-4">List</h1>
       {people.map((person, index) => (
         <div
+          key={index + person.name}
           className="relative flex space-x-3 border rounded p-2 "
           draggable
           onDragStart={() => (dragPerson.current = index)}
