@@ -1,3 +1,5 @@
+"use server";
+
 import supabase from "@/lib/supabase";
 
 export async function connectAgentToStan(agent_id_arg, stan_id_arg) {
@@ -56,3 +58,11 @@ export async function createStanAndConnectToObject() {
   if (error) console.error(error);
   else console.log(data);
 }
+
+export const signOut = async () => {
+  "use server";
+
+  const supabase = createClient();
+  await supabase.auth.signOut();
+  return redirect("/login");
+};

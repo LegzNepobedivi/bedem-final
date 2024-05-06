@@ -126,15 +126,18 @@ export default function PrikazNekretnine() {
           </div>
         </div>
         {/*Sledeca sekcija*/}
-        <div className="bgIvanZelenaSvetla py-3">
-          <div className="px-4">
-            <p className="text-center text-4xl">O lokaciji</p>
-            <div className="border-t border-gray-600 my-4"></div>
-            <p className="text-center ivanSiva font-thin">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae s
-              voluptatum, quas, quos quod, quibusdam autem doloremque voluptates
-              tempora quia quidem aperiam. Quisquam, quidem. Quisquam, quidem.
-            </p>
+        <div className="bgIvanZelenaSvetla py-3 ">
+          <div className="mx-auto container">
+            <div className="px-4">
+              <p className="text-center text-4xl">O lokaciji</p>
+              <div className="border-t border-gray-600 my-4"></div>
+              <p className="text-center ivanSiva font-thin">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae s
+                voluptatum, quas, quos quod, quibusdam autem doloremque
+                voluptates tempora quia quidem aperiam. Quisquam, quidem.
+                Quisquam, quidem.
+              </p>
+            </div>
           </div>
         </div>
       </div>

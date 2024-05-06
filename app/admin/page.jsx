@@ -1,4 +1,3 @@
-import { Search } from "@/components/adminpage/Search";
 import DragAndDrop from "@/components/adminpage/DragAndDrop";
 import { CustomKanban } from "@/components/adminpage/NotionKanban";
 

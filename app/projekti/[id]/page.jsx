@@ -30,6 +30,7 @@ function ProjekatJedan() {
               src="/images/slika2.jpg"
               fill
               style={{ objectFit: "cover" }}
+              alt="Slika projekta/Kompleksa nekretnina"
             />
           </div>
         </div>
