@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import AgentSvg from "../svgComp/AgentSvg";
 import PhoneSvg from "../svgComp/PhoneSvg";
+import Link from "next/link";
 
 export default function Kartica({
   sourceUrl,
@@ -11,6 +12,7 @@ export default function Kartica({
   numberOfRooms = "4 sobe",
   hasVr = false,
   isNovo = false,
+  showLink = "/",
 }) {
   return (
     <div className="md:rounded-lg shadow-lg overflow-hidden">
@@ -34,22 +36,26 @@ export default function Kartica({
         </div>
         <div className="relative grid grid-cols-1">
           <div className="relative h-80">
-            <Image
-              src={sourceUrl}
-              alt="Picture of real estate"
-              fill
-              style={{ objectFit: "cover" }}
-              //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            />
+            <Link href={showLink}>
+              <Image
+                src={sourceUrl}
+                alt="Picture of real estate"
+                fill
+                style={{ objectFit: "cover" }}
+                //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
+            </Link>
           </div>
         </div>
         <div className="pt-2 px-2">
           <div className="text-xl ivanZelena font-medium " aria-hidden="true">
-            {title}
+            <Link href={showLink}>{title}</Link>
           </div>
         </div>
         <div className="pt-1 px-2">
-          <div className="text-lg text-black font-bold">$1,900,000</div>
+          <div className="text-lg text-black font-bold">
+            <Link href={showLink}>$1,900,000</Link>
+          </div>
         </div>
         <div className="pt-1 px-2">
           <div className="text-base text-stone-400">
@@ -68,7 +74,7 @@ export default function Kartica({
             <div className="flex ivanZelena border-2 border-green-950 w-fit ">
               <PhoneSvg />
               <div className="bg-green-950 uppercase text-white text-sm py-1 px-2 hover:bg-green-900">
-                Pozovi
+                <Link href="tel:+381691234567">Pozovi</Link>
               </div>
             </div>
           </div>

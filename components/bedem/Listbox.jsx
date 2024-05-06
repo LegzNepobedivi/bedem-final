@@ -34,7 +34,7 @@ export default function M_Listbox({ classes = "", people }) {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            <Listbox.Options className="absolute mt-1 max-h-60 w-56 overflow-auto rounded-md bgIvanZelenaSvetla py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm z-20">
+            <Listbox.Options className="absolute mt-1 max-h-60 w-60 overflow-auto rounded-md bgIvanZelenaSvetla py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm z-20">
               {people.map((person, personIdx) => (
                 <Listbox.Option
                   key={personIdx}

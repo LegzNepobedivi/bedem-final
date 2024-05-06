@@ -4,11 +4,13 @@ import Pretraga from "./Pretraga";
 import { poppins } from "@/app/layout";
 import Izdvajamo from "./Izdvajamo";
 import Predlozi from "./Predlozi";
+import { TextParallaxContentWhole } from "../foreign/TextParallaxContent";
 
 export default function Naslovna() {
   return (
     <div className="bg-white">
-      <div className="bg-[url('/images/slika1.jpg')] text-center">
+      <TextParallaxContentWhole />
+      {/* <div className="bg-[url('/images/slika1.jpg')] text-center">
         <div className="p-10">
           <div className="text-center text-5xl">Sa nama ste bezbedni</div>
           <div
@@ -22,7 +24,7 @@ export default function Naslovna() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="container mx-auto">
         <div className="ivanZelena text-3xl font-medium pl-6 pt-6">
           Pronađite svoj dom

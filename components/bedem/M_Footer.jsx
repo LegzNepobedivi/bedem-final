@@ -56,8 +56,8 @@ const M_Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/mapa" className="hover:text-gray-700">
-                  Mapa
+                <Link href="/projekti" className="hover:text-gray-700">
+                  Projekti
                 </Link>
               </li>
               <li>
