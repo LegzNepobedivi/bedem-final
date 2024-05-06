@@ -10,6 +10,16 @@ import { SwipeCarousel } from "@/components/foreign/SwipeCarousel";
 import Predlozi from "@/components/bedem/Predlozi";
 import Link from "next/link";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { ArrowsPointingOutIcon } from "@heroicons/react/24/solid";
+
 export default function PrikazNekretnine() {
   return (
     <div className="bg-white">
@@ -80,20 +90,23 @@ export default function PrikazNekretnine() {
           </div>
         </div>
       </div>
-      <div className="mx-auto container md:w-3/4 lg:w-2/3">
+
+      <div className="mx-auto container md:w-3/4 lg:w-2/3  text-end">
         <hr className="h-px my-4 bg-gray-200 border-0 dark:bg-gray-400"></hr>
-        {/* <div className="relative grid grid-cols-1 p-2">
-          <div className="relative h-80">
-            <Image
-              src="/images/slika1.jpg"
-              alt="Picture of real estate"
-              layout="fill"
-              objectFit="cover"
-            />
-          </div>
-        </div> */}
+        <Dialog>
+          <DialogTrigger className="text-black">
+            <ArrowsPointingOutIcon className="w-4 h-4 mt-7 absolute" />
+          </DialogTrigger>
+          <DialogContent>
+            <DialogHeader>
+              {/* <DialogTitle>Are you absolutely sure?</DialogTitle> */}
+              <DialogDescription>
+                <Image src="/images/slika1.jpg" height={300} width={700} />
+              </DialogDescription>
+            </DialogHeader>
+          </DialogContent>
+        </Dialog>
         <SwipeCarousel />
-        {/*Sledeca sekcija*/}
       </div>
       <div>
         <div className="p-2 ivanZelena text-center ">
@@ -129,7 +142,7 @@ export default function PrikazNekretnine() {
         <div className="bgIvanZelenaSvetla py-3 ">
           <div className="mx-auto container">
             <div className="px-4">
-              <p className="text-center text-4xl">O lokaciji</p>
+              <p className="text-center text-4xl">Opis</p>
               <div className="border-t border-gray-600 my-4"></div>
               <p className="text-center ivanSiva font-thin">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae s

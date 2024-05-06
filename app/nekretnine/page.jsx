@@ -14,9 +14,8 @@ export default async function NekretninePage() {
           <Pretraga />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 container mx-auto">
-          <Link href="/nekretnine/1">
-            <Kartica sourceUrl="/images/slika1.jpg" />
-          </Link>
+          <Kartica showLink="/nekretnine/1" sourceUrl="/images/slika1.jpg" />
+
           <Kartica hasVr="true" sourceUrl="/images/slika2.jpg" />
           <Kartica sourceUrl="/images/slika3.jpg" />
           <Kartica sourceUrl="/images/slika1.jpg" />
